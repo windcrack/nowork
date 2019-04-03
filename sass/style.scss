@@ -218,6 +218,10 @@ nav{
     position: fixed;
     right: 0;
     background-color: #000;
+    i{
+        font-size: v(20);
+        padding-right: v(4);
+    }
     @media (max-width: 600px){
         grid-area: cart;
         top: v(12)
@@ -261,6 +265,9 @@ nav{
     width: 35px;
     height: 25px;
     border: none;
+    i{
+        font-size: v(24);
+    }
     @media (max-width: 600px){
         margin-left: v(5); 
     }
@@ -275,14 +282,14 @@ nav{
 }
 
 .btn-side-open {
-    background: url("../img/btn-start.svg") no-repeat;
+    background-color: #000;
     background-size: contain;
     cursor: pointer;
 }
 
 .btn-side-close,
 .btn-side-closeMob {
-    background: url("../img/close.svg") no-repeat;
+    background: #000;
     background-size: contain;
     cursor: pointer;
     display: none;
@@ -445,12 +452,22 @@ main{
 }
 .headText{
     margin-left: v(30);
+    // font-size: v(12);
     &:nth-child(1){
-        margin-top: v(5);
+        margin-top: v(0);
+        
     }
     &:nth-child(2){
         margin-bottom: v(4);
     }
+}
+@media (min-width: 600px){
+    .headText{
+        &:nth-child(1){
+            margin-top: 0;
+        }
+    }
+    
 }
 .menu-section{
     display: none;
@@ -471,8 +488,11 @@ main{
     height: v(35);
     color: #000;
     text-align: left;
-    padding-left: v(8);
-    font-size: v(20);
+    padding-left: v(16);
+    font-size: v(16);
+}
+i{
+    color: #fdad1a;
 }
 .siteBlock{
     padding-bottom: v(6);

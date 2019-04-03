@@ -4,23 +4,9 @@ $('.text-slider').slick({
     variableWidth: true,
     dots: false,
     infinite: false,
+    initialSlide: 0,
     slideToScroll: 1,
     centerPadding: '0px',
-    // responsive:[
-    //     {
-    //         breakpoint: 600,
-    //         settings:{
-    //             adaptiveHeight: true,
-    //             arrows: false,
-    //             variableWidth: true,
-    //             dots: false,
-    //             initialSlide: 0,
-    //             slidesToShow: 3,
-    //             slideToScroll: 1,
-    //             centerPadding: '0px',
-    //         }
-    //     }
-    // ]
 });
 const menuLeft = document.querySelector('.leftMenuBlock'),
       inMenu = document.querySelector('.leftMenuMain'),
@@ -28,9 +14,10 @@ const menuLeft = document.querySelector('.leftMenuBlock'),
       headerBlock = document.querySelector('.menuHeader'),
       siteBlock = document.querySelectorAll('.menu-section'),
       btnClose = document.querySelector('.btn-side-close'),
-      btnCloseMob = document.querySelector('.btn-side-closeMob');
+      btnCloseMob = document.querySelector('.btn-side-closeMob'),
+      btnCloseMobEl = document.querySelector('.secretBlock .btn-side-closeMob i');
 let width = innerWidth
-console.log(siteBlock);
+console.log(btnCloseMob);
 const showTime = {
     menu: function(){
         setTimeout(() =>{ inMenu.style.display = 'flex' }, 100)
@@ -48,7 +35,7 @@ const showTime = {
     }
 }
 
-function showLeftSideMenu (open, close, closeMob, menu){
+function showLeftSideMenu (open, close, closeMob, closeMobE, menu){
     open.addEventListener('click', () => {
         menu.style.display = 'block'
         close.style.display = 'block'
@@ -66,7 +53,7 @@ function showLeftSideMenu (open, close, closeMob, menu){
         showTime.hiddeAll()
     })
     if(width <= 600){
-        closeMob.addEventListener('click', () =>{
+        closeMobE.addEventListener('click', () =>{
             open.style.display = 'block'
             menu.style.display = 'none'
             close.style.display = 'none'
@@ -82,4 +69,4 @@ const clientWidth = () =>{
     }, 100)
 }
 clientWidth()
-showLeftSideMenu(btnOpen, btnClose, btnCloseMob, menuLeft)
+showLeftSideMenu(btnOpen, btnClose, btnCloseMob, btnCloseMobEl, menuLeft)

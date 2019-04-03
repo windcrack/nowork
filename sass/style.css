@@ -217,6 +217,11 @@ nav {
   background-color: #000;
 }
 
+.menu-cart i {
+  font-size: 5rem;
+  padding-right: 1rem;
+}
+
 @media (max-width: 600px) {
   .menu-cart {
     grid-area: cart;
@@ -282,6 +287,10 @@ nav {
   border: none;
 }
 
+.toggle-button i {
+  font-size: 6rem;
+}
+
 @media (max-width: 600px) {
   .toggle-button {
     margin-left: 1.25rem;
@@ -300,14 +309,14 @@ nav {
 }
 
 .btn-side-open {
-  background: url("../img/btn-start.svg") no-repeat;
+  background-color: #000;
   background-size: contain;
   cursor: pointer;
 }
 
 .btn-side-close,
 .btn-side-closeMob {
-  background: url("../img/close.svg") no-repeat;
+  background: #000;
   background-size: contain;
   cursor: pointer;
   display: none;
@@ -574,11 +583,17 @@ main {
 }
 
 .headText:nth-child(1) {
-  margin-top: 1.25rem;
+  margin-top: 0rem;
 }
 
 .headText:nth-child(2) {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  .headText:nth-child(1) {
+    margin-top: 0;
+  }
 }
 
 .menu-section {
@@ -609,8 +624,12 @@ main {
   height: 8.75rem;
   color: #000;
   text-align: left;
-  padding-left: 2rem;
-  font-size: 5rem;
+  padding-left: 4rem;
+  font-size: 4rem;
+}
+
+i {
+  color: #fdad1a;
 }
 
 .siteBlock {
