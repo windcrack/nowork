@@ -165,6 +165,15 @@ nav {
     grid-area: phone;
     padding-left: 1.25rem;
   }
+}
+
+@media (max-width: 600px) and (max-width: 360px) {
+  nav .phone a {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 600px) {
   nav .phone a {
     text-decoration: none;
     color: #fff;
@@ -312,7 +321,7 @@ nav {
   .btn-side-closeMob {
     -webkit-animation: marginLeftMob 1s 1;
             animation: marginLeftMob 1s 1;
-    margin-left: 2rem;
+    margin-left: 1rem;
     z-index: 100;
   }
 }
@@ -322,7 +331,7 @@ nav {
     margin-left: 0;
   }
   100% {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 
@@ -331,7 +340,7 @@ nav {
     margin-left: 0;
   }
   100% {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 

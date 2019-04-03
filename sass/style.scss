@@ -172,6 +172,11 @@ nav{
             margin: auto;
             grid-area: phone;
             padding-left: v(5);
+            @media (max-width: 360px){
+                a{
+                    font-size: v(14);
+                }
+            }
             a{
                 text-decoration: none;
                 color: #fff;
@@ -285,7 +290,7 @@ nav{
     animation: marginLeft 1s 1;
     @media (max-width:600px){
         animation: marginLeftMob 1s 1;
-        margin-left: v(8);
+        margin-left: v(4);
         z-index: 100;
     }
 }
@@ -296,7 +301,7 @@ nav{
     }
     
     100% {
-        margin-left: v(8);
+        margin-left: v(4);
     }
 }
 
