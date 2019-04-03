@@ -241,7 +241,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: v(4) v(30) v(4) v(20);
-    box-shadow: -10px 1px 10px 10px rgba(0, 0, 0, 1);
+    box-shadow: -10px 1px 10px 8px rgba(0, 0, 0, 1);
     @media (max-width: 600px){
         box-shadow: none;
         padding: v(4) v(10) v(4) v(5);
@@ -432,6 +432,7 @@ main{
     .secretBlock{
         display: none;
     }
+
     @media (max-width: 600px){
         justify-content: space-between;
         flex-direction: row;
@@ -454,14 +455,20 @@ main{
     margin-left: v(30);
     // font-size: v(12);
     &:nth-child(1){
-        margin-top: v(0);
-        
+        margin-top: v(5);
     }
     &:nth-child(2){
         margin-bottom: v(4);
     }
 }
-@media (min-width: 600px){
+@media (max-width: 1360px){
+    .headText{
+        &:nth-child(1){
+            margin-top: v(0);
+        }
+    }
+}
+@media (max-width: 600px){
     .headText{
         &:nth-child(1){
             margin-top: 0;

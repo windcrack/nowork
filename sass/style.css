@@ -250,8 +250,8 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 7.5rem 1rem 5rem;
-  -webkit-box-shadow: -10px 1px 10px 10px black;
-          box-shadow: -10px 1px 10px 10px black;
+  -webkit-box-shadow: -10px 1px 10px 8px black;
+          box-shadow: -10px 1px 10px 8px black;
 }
 
 @media (max-width: 600px) {
@@ -583,14 +583,20 @@ main {
 }
 
 .headText:nth-child(1) {
-  margin-top: 0rem;
+  margin-top: 1.25rem;
 }
 
 .headText:nth-child(2) {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 1360px) {
+  .headText:nth-child(1) {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 600px) {
   .headText:nth-child(1) {
     margin-top: 0;
   }
