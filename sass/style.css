@@ -26,7 +26,8 @@ h1 {
   line-height: 16rem;
 }
 
-p {
+p,
+a {
   font-size: 4rem;
   line-height: 6rem;
 }
@@ -145,6 +146,34 @@ nav {
           align-items: center;
 }
 
+@media (max-width: 600px) {
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10rem 12.5rem 1fr 24.25rem;
+        grid-template-columns: 10rem 12.5rem 1fr 24.25rem;
+    -ms-grid-rows: 12.5rem 7.5rem;
+        grid-template-rows: 12.5rem 7.5rem;
+        grid-template-areas: "lMenu logo phone cart" "Tmenu Tmenu Tmenu Tmenu";
+  }
+  nav .phone {
+    text-align: center;
+    display: block;
+    margin: auto;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: phone;
+    padding-left: 1.25rem;
+  }
+  nav .phone a {
+    text-decoration: none;
+    color: #fff;
+  }
+  nav .phone a:hover {
+    color: #fdad1a;
+  }
+}
+
 .panel {
   float: left;
   overflow-y: hidden;
@@ -157,7 +186,18 @@ nav {
 
 @media (max-width: 600px) {
   .logo {
-    margin-left: 2.5rem;
+    padding-right: 1rem;
+  }
+}
+
+.phone {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    margin-left: 0.75rem;
+    grid-area: logo;
   }
 }
 
@@ -166,6 +206,13 @@ nav {
   position: fixed;
   right: 0;
   background-color: #000;
+}
+
+@media (max-width: 600px) {
+  .menu-cart {
+    grid-area: cart;
+    top: 3rem;
+  }
 }
 
 .menu-cart .cartInBlock img {
@@ -195,7 +242,9 @@ nav {
 
 @media (max-width: 600px) {
   .cartInBlock {
-    padding: 1rem 2.5rem 1rem 2.5rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 1rem 2.5rem 1rem 1.25rem;
   }
 }
 
@@ -233,6 +282,12 @@ nav {
 .panel {
   float: none;
   display: contents;
+}
+
+@media (max-width: 600px) {
+  .panel {
+    grid-area: lMenu;
+  }
 }
 
 .btn-side-open {
@@ -305,6 +360,12 @@ nav {
 .blockTwo {
   margin: 1rem 0;
   width: auto;
+}
+
+@media (max-width: 600px) {
+  .blockTwo {
+    grid-area: Tmenu;
+  }
 }
 
 .testMenu {
@@ -544,7 +605,7 @@ main {
 }
 
 .siteBlock {
-  padding-bottom: 5rem;
+  padding-bottom: 1.5rem;
 }
 
 .siteBlock:nth-child(1) {
@@ -581,5 +642,11 @@ main {
 
 .socialBlock a {
   padding: 5rem 7.5rem;
+}
+
+@media (max-width: 600px) {
+  .socialBlock a {
+    padding: 2.5rem 1.25rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

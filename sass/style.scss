@@ -43,7 +43,8 @@ h1 {
     line-height: v(64);
 }
 
-p {
+p,
+a {
     font-size: v(16);
     line-height: v(24);
 }
@@ -96,8 +97,6 @@ main{
     // text-align: center;
     // margin-top: auto;
 }
-
-
 
 .miniChat{
     grid-area: chat;
@@ -160,7 +159,31 @@ header {
 nav{
     display: flex;
     align-items: center;
+    @media (max-width: 600px){
+        display: grid;
+        grid-template-columns: v(40) v(50) 1fr v(97);
+        grid-template-rows: v(50) v(30);
+        grid-template-areas: 
+        "lMenu logo phone cart"
+        "Tmenu Tmenu Tmenu Tmenu";
+        .phone{
+            text-align: center;
+            display: block;
+            margin: auto;
+            grid-area: phone;
+            padding-left: v(5);
+            a{
+                text-decoration: none;
+                color: #fff;
+                &:hover{
+                    color: #fdad1a;
+                }
+            }
+        }
+    }
 }
+
+// Menu
 
 .panel{
     float: left;
@@ -170,10 +193,19 @@ nav{
 .logo {
     padding: v(4) 0;
     margin-left: v(25);
+    @media (max-width: 600px){
+        padding-right: v(4);
+    }
 }
+
+.phone{
+    display: none;
+}
+
 @media (max-width: 600px){
     .logo{
-        margin-left: v(10);
+        margin-left: v(3);
+        grid-area: logo;
     }
 }
 .menu-cart {
@@ -181,6 +213,10 @@ nav{
     position: fixed;
     right: 0;
     background-color: #000;
+    @media (max-width: 600px){
+        grid-area: cart;
+        top: v(12)
+    }
     .cartInBlock{
         img{
             padding-right: v(15);
@@ -197,13 +233,10 @@ nav{
     align-items: center;
     padding: v(4) v(30) v(4) v(20);
     box-shadow: -10px 1px 10px 10px rgba(0, 0, 0, 1);
-}
-
-@media (max-width:600px){
-    .cartInBlock{
-        padding: v(4) v(10) v(4) v(10);
+    @media (max-width: 600px){
+        box-shadow: none;
+        padding: v(4) v(10) v(4) v(5);
     }
-    
 }
 
 .text-slider{
@@ -231,6 +264,9 @@ nav{
 .panel{
     float: none;
     display: contents;
+    @media (max-width: 600px){
+        grid-area: lMenu;
+    }
 }
 
 .btn-side-open {
@@ -281,7 +317,11 @@ nav{
 .blockTwo{
     margin: v(4) 0;
     width: auto;
+    @media (max-width: 600px){
+        grid-area: Tmenu
+    }
 }
+
 .testMenu{
     height: 40%;
     color: #F47810;
@@ -430,7 +470,7 @@ main{
     font-size: v(20);
 }
 .siteBlock{
-    padding-bottom: v(20);
+    padding-bottom: v(6);
     &:nth-child(1){
         padding-left: v(4);
     }
@@ -450,5 +490,10 @@ main{
     justify-content: center;
     a{
         padding: v(20) v(30);
+    }
+    @media (max-width: 600px){
+        a{
+            padding: v(10) v(5);
+        }
     }
 }

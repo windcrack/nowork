@@ -4,22 +4,23 @@ $('.text-slider').slick({
     variableWidth: true,
     dots: false,
     infinite: false,
+    slideToScroll: 1,
     centerPadding: '0px',
-    responsive:[
-        {
-            breakpoint: 600,
-            settings:{
-                adaptiveHeight: true,
-                arrows: false,
-                variableWidth: true,
-                dots: false,
-                initialSlide: 0,
-                slidesToShow: 3,
-                slideToScroll: 1,
-                centerPadding: '0px',
-            }
-        }
-    ]
+    // responsive:[
+    //     {
+    //         breakpoint: 600,
+    //         settings:{
+    //             adaptiveHeight: true,
+    //             arrows: false,
+    //             variableWidth: true,
+    //             dots: false,
+    //             initialSlide: 0,
+    //             slidesToShow: 3,
+    //             slideToScroll: 1,
+    //             centerPadding: '0px',
+    //         }
+    //     }
+    // ]
 });
 const menuLeft = document.querySelector('.leftMenuBlock'),
       inMenu = document.querySelector('.leftMenuMain'),
@@ -75,7 +76,10 @@ function showLeftSideMenu (open, close, closeMob, menu){
     }
 }
 const main = document.querySelector('main');
-setInterval(() =>{
-    main.innerHTML = `Ширина - ${width}`
-}, 100) 
+const clientWidth = () =>{
+    setInterval(() =>{
+        main.innerHTML = `Ширина - ${width}`
+    }, 100)
+}
+clientWidth()
 showLeftSideMenu(btnOpen, btnClose, btnCloseMob, menuLeft)
