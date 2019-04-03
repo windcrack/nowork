@@ -596,7 +596,7 @@ main {
 
 @media (max-width: 600px) {
   .menu-section {
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
