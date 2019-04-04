@@ -250,6 +250,10 @@ nav{
 
 .text-slider{
     display: flex;
+    // scroll-snap-points-x: repeat(100%);
+    // scroll-snap-type: mandatory;
+    // overflow: auto;
+    // overflow-x: hidden;
 }
 
 .text-slider a {

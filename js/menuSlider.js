@@ -4,10 +4,24 @@ $('.text-slider').slick({
     variableWidth: true,
     dots: false,
     infinite: false,
-    initialSlide: 0,
-    slideToScroll: 1,
     centerPadding: '0px',
-});
+    responsive:[
+        {
+            breakpoint: 600,
+            settings:{
+                adaptiveHeight: true,
+                arrows: false,
+                variableWidth: true,
+                dots: false,
+                initialSlide: 0,
+                slidesToShow: 3,
+                slideToScroll: 1,
+                centerPadding: '0px',
+            }
+        }
+    ]
+  });
+
 const menuLeft = document.querySelector('.leftMenuBlock'),
       inMenu = document.querySelector('.leftMenuMain'),
       btnOpen = document.querySelector('.btn-side-open'),
@@ -17,7 +31,6 @@ const menuLeft = document.querySelector('.leftMenuBlock'),
       btnCloseMob = document.querySelector('.btn-side-closeMob'),
       btnCloseMobEl = document.querySelector('.secretBlock .btn-side-closeMob i');
 let width = innerWidth
-console.log(btnCloseMob);
 const showTime = {
     menu: function(){
         setTimeout(() =>{ inMenu.style.display = 'flex' }, 100)
