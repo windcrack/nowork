@@ -34,6 +34,7 @@ export default function menuSlider (){
           btnCloseMob = document.querySelector('.btn-side-closeMob'),
           btnCloseMobEl = document.querySelector('.secretBlock .btn-side-closeMob i');
     let width = innerWidth
+    // Обект появелниея блоков по очеродности.
     const showTime = {
         menu: function(){
             setTimeout(() =>{ inMenu.style.display = 'flex' }, 100)
@@ -50,7 +51,7 @@ export default function menuSlider (){
             siteBlock.forEach(item =>{ item.style.display = 'none' })
         }
     }
-    
+    // фунция зарытия открытия меню и всех его частей
     function showLeftSideMenu (open, close, closeMob, closeMobE, menu){
         open.addEventListener('click', () => {
             menu.style.display = 'block'
@@ -78,12 +79,5 @@ export default function menuSlider (){
             })
         }
     }
-    const main = document.querySelector('main');
-    const clientWidth = () =>{
-        setInterval(() =>{
-            main.innerHTML = `Ширина - ${width}`
-        }, 100)
-    }
-    clientWidth()
     showLeftSideMenu(btnOpen, btnClose, btnCloseMob, btnCloseMobEl, menuLeft)
 }
