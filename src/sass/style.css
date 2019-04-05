@@ -130,6 +130,10 @@ main {
   }
 }
 
+:root {
+  --yellowColor: #fdad1a;
+}
+
 header {
   background: #000;
   border-bottom: 1px solid #F47810;
@@ -179,7 +183,7 @@ nav {
     color: #fff;
   }
   nav .phone a:hover {
-    color: #fdad1a;
+    color: var(--yellowColor);
   }
 }
 
@@ -580,26 +584,30 @@ main {
 
 .headText {
   margin-left: 7.5rem;
+  margin: 1.35rem 5rem;
 }
 
-.headText:nth-child(1) {
-  margin-top: 1.25rem;
+.headText a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.headText:nth-child(2) {
-  margin-bottom: 1rem;
+.headText a:hover {
+  color: var(--yellowColor);
 }
 
-@media (max-width: 1360px) {
-  .headText:nth-child(1) {
-    margin-top: 0rem;
-  }
+.headTextLogin {
+  margin: 3.5rem auto;
 }
 
-@media (max-width: 600px) {
-  .headText:nth-child(1) {
-    margin-top: 0;
-  }
+.textBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .menu-section {
@@ -622,7 +630,7 @@ main {
 }
 
 .callUs {
-  background: url("../img/phone.svg") right 5% center no-repeat, #fdad1a;
+  background: url("../img/phone.svg") right 5% center no-repeat, var(--yellowColor);
   background-size: 11% 50%;
   border-radius: 12.5rem;
   border: none;
@@ -635,7 +643,7 @@ main {
 }
 
 i {
-  color: #fdad1a;
+  color: var(--yellowColor);
 }
 
 .siteBlock {

@@ -1,5 +1,6 @@
 
 export default function menuSlider (){
+    // Это старые настройки меню.
     $('.text-slider').slick({
         arrows: false,
         variableWidth: true,
@@ -22,7 +23,8 @@ export default function menuSlider (){
             }
         ]
       });
-    
+    // -----------------------------------------
+    // Это новое боковое меню.
     const menuLeft = document.querySelector('.leftMenuBlock'),
           inMenu = document.querySelector('.leftMenuMain'),
           btnOpen = document.querySelector('.btn-side-open'),

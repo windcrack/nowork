@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -149,6 +150,11 @@ main{
 
 // Menu
 
+:root{
+    --yellowColor: #fdad1a;
+}
+
+
 header {
     background: #000;
     border-bottom: 1px solid #F47810;
@@ -181,14 +187,12 @@ nav{
                 text-decoration: none;
                 color: #fff;
                 &:hover{
-                    color: #fdad1a;
+                    color: var(--yellowColor);
                 }
             }
         }
     }
 }
-
-// Menu
 
 .panel{
     float: left;
@@ -250,10 +254,6 @@ nav{
 
 .text-slider{
     display: flex;
-    // scroll-snap-points-x: repeat(100%);
-    // scroll-snap-type: mandatory;
-    // overflow: auto;
-    // overflow-x: hidden;
 }
 
 .text-slider a {
@@ -458,28 +458,23 @@ main{
 .headText{
     margin-left: v(30);
     // font-size: v(12);
-    &:nth-child(1){
-        margin-top: v(5);
-    }
-    &:nth-child(2){
-        margin-bottom: v(4);
-    }
-}
-@media (max-width: 1360px){
-    .headText{
-        &:nth-child(1){
-            margin-top: v(0);
+    margin: v(5.4) v(20);
+    a{
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+            color: var(--yellowColor);
         }
     }
 }
-@media (max-width: 600px){
-    .headText{
-        &:nth-child(1){
-            margin-top: 0;
-        }
-    }
-    
+.headTextLogin{
+    margin: v(14) auto;
 }
+.textBlock{
+    display: flex;
+    flex-direction: column;
+}
+
 .menu-section{
     display: none;
     animation: showBlock 1s 1;
@@ -491,7 +486,7 @@ main{
 }
 
 .callUs{
-    background: url('../img/phone.svg') right 5% center no-repeat, #fdad1a;
+    background: url('../img/phone.svg') right 5% center no-repeat, var(--yellowColor);
     background-size: 11% 50%;
     border-radius: v(50);
     border: none;
@@ -503,7 +498,7 @@ main{
     font-size: v(16);
 }
 i{
-    color: #fdad1a;
+    color: var(--yellowColor);
 }
 .siteBlock{
     padding-bottom: v(6);

@@ -1,0 +1,570 @@
+/* Main menu */
+:root {
+    --yellowColor: #fdad1a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #000;
+    border-bottom: 1px solid #F47810;
+    z-index: 2;
+    position: fixed;
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@media (max-width: 600px) {
+    nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10rem 12.5rem 1fr 24.25rem;
+        grid-template-columns: 10rem 12.5rem 1fr 24.25rem;
+    -ms-grid-rows: 12.5rem 7.5rem;
+        grid-template-rows: 12.5rem 7.5rem;
+        grid-template-areas: "lMenu logo phone cart" "Tmenu Tmenu Tmenu Tmenu";
+    }
+    nav .phone {
+    text-align: center;
+    display: block;
+    margin: auto;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: phone;
+    padding-left: 1.25rem;
+    }
+}
+
+@media (max-width: 600px) and (max-width: 360px) {
+    nav .phone a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav .phone a {
+    text-decoration: none;
+    color: #fff;
+    }
+    nav .phone a:hover {
+    color: var(--yellowColor);
+    }
+}
+
+.panel {
+    float: left;
+    overflow-y: hidden;
+}
+
+.logo {
+    padding: 1rem 0;
+    margin-left: 1.56rem;
+}
+
+@media (max-width: 600px) {
+    .logo {
+    padding-right: 1rem;
+    }
+}
+
+.phone {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        margin-left: 0.75rem;
+        grid-area: logo;
+    }
+}
+
+.menu-cart {
+    color: #F47810;
+    position: fixed;
+    right: 0;
+    background-color: #000;
+}
+
+.menu-cart i {
+    font-size: 1.25rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 600px) {
+    .menu-cart {
+    grid-area: cart;
+    top: 3rem;
+    }
+}
+
+.menu-cart .cartInBlock img {
+    padding-right: 3.75rem;
+}
+
+@media (max-width: 600px) {
+    .menu-cart .cartInBlock img {
+    padding-right: 0.5rem;
+    }
+}
+
+.cartInBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.25rem 1.875rem 0.25rem 1.25rem;
+    -webkit-box-shadow: -10px 1px 10px 8px black;
+            box-shadow: -10px 1px 10px 8px black;
+}
+
+@media (max-width: 600px) {
+    .cartInBlock {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 1rem 2.5rem 1rem 1.25rem;
+    }
+}
+
+.text-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.text-slider a {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.toggle-button {
+    margin: 1rem 0 1rem 1.56rem;
+    width: 35px;
+    height: 25px;
+    border: none;
+}
+
+.toggle-button i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .toggle-button {
+        margin-left: 1.25rem;
+    }
+}
+
+.panel {
+    float: none;
+    display: contents;
+}
+
+@media (max-width: 600px) {
+    .panel {
+    grid-area: lMenu;
+    }
+}
+
+.btn-side-open {
+    background-color: #000;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.btn-side-close,
+.btn-side-closeMob {
+    background: #000;
+    background-size: contain;
+    cursor: pointer;
+    display: none;
+    margin-left: 71.5rem;
+    -webkit-animation: marginLeft 1s 1;
+            animation: marginLeft 1s 1;
+}
+
+@media (max-width: 600px) {
+    .btn-side-close,
+    .btn-side-closeMob {
+    -webkit-animation: marginLeftMob 1s 1;
+            animation: marginLeftMob 1s 1;
+    margin-left: 1rem;
+    z-index: 100;
+    }
+}
+
+@-webkit-keyframes marginLeftMob {
+    0% {
+    margin-left: 0;
+    }
+    100% {
+    margin-left: 1rem;
+    }
+}
+
+@keyframes marginLeftMob {
+    0% {
+    margin-left: 0;
+    }
+    100% {
+    margin-left: 1rem;
+    }
+}
+
+@-webkit-keyframes marginLeft {
+    0% {
+    margin-left: 0;
+    }
+    100% {
+    margin-left: 71.5rem;
+    }
+}
+
+@keyframes marginLeft {
+    0% {
+    margin-left: 0;
+    }
+    100% {
+    margin-left: 71.5rem;
+    }
+}
+
+.textInSlider {
+    padding: 0.5rem;
+}
+
+.blockTwo {
+    margin: 0.25rem 0;
+    width: auto;
+}
+
+@media (max-width: 600px) {
+    .blockTwo {
+    grid-area: Tmenu;
+    }
+}
+
+.testMenu {
+    height: 40%;
+    color: #F47810;
+}
+
+/* Left Menu */
+
+.leftMenuBlock {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 64rem;
+    min-height: 100vh;
+    background: #181B23;
+    z-index: 10;
+    overflow-y: hidden;
+    display: none;
+    -webkit-animation: slideIn 600ms 1;
+            animation: slideIn 600ms 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@media (max-width: 600px) {
+    .leftMenuBlock {
+    width: 100%;
+    -webkit-animation: slideInMob 600ms 1;
+            animation: slideInMob 600ms 1;
+    }
+}
+
+@-webkit-keyframes slideInMob {
+    0% {
+    width: 0;
+    }
+    100% {
+    width: 100%;
+    }
+}
+
+@keyframes slideInMob {
+    0% {
+    width: 0;
+    }
+    100% {
+    width: 100%;
+    }
+}
+
+.slideIn {
+    -webkit-animation-duration: 300ms;
+            animation-duration: 300ms;
+    -webkit-animation-name: slideIn;
+            animation-name: slideIn;
+}
+
+.slideOut {
+    -webkit-animation-duration: 300ms;
+            animation-duration: 300ms;
+    -webkit-animation-name: slideOut;
+            animation-name: slideOut;
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+    width: 0;
+    }
+    100% {
+    width: 64rem;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+    width: 0;
+    }
+    100% {
+    width: 64rem;
+    }
+}
+
+@-webkit-keyframes slideOut {
+    from {
+    opacity: 1;
+    }
+    to {
+    opacity: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+    opacity: 1;
+    }
+    to {
+    opacity: 0;
+    }
+}
+
+.leftMenuMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    display: none;
+    -webkit-animation: menuMain 1s 1;
+            animation: menuMain 1s 1;
+}
+
+@-webkit-keyframes menuMain {
+    0% {
+    height: 0;
+    }
+    100% {
+    height: 100%;
+    }
+}
+
+@keyframes menuMain {
+    0% {
+    height: 0;
+    }
+    100% {
+    height: 100%;
+    }
+}
+
+main {
+    padding-top: 30%;
+}
+
+.menuHeader {
+    color: #fff;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 1px solid #F47810;
+    opacity: 1;
+    background-color: #000;
+    -webkit-animation: showBlock 1s 1;
+            animation: showBlock 1s 1;
+}
+
+.menuHeader .secretBlock {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .menuHeader {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    }
+    .menuHeader .secretBlock {
+    display: inline;
+    width: 8.75rem;
+    height: 6.25rem;
+    }
+}
+
+@-webkit-keyframes showBlock {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+@keyframes showBlock {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+.headText {
+    margin-left: 7.5rem;
+    margin: 1.35rem 5rem;
+}
+
+.headText a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.headText a:hover {
+    color: var(--yellowColor);
+}
+
+.headTextLogin {
+    margin: 3.5rem auto;
+}
+
+.textBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.menu-section {
+    display: none;
+    -webkit-animation: showBlock 1s 1;
+            animation: showBlock 1s 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .menu-section {
+    margin: 0 auto;
+    }
+}
+
+.callUs {
+    background: url("../img/phone.svg") right 5% center no-repeat, var(--yellowColor);
+    background-size: 11% 50%;
+    border-radius: 12.5rem;
+    border: none;
+    width: 46.75rem;
+    height: 8.75rem;
+    color: #000;
+    text-align: left;
+    padding-left: 4rem;
+    font-size: 4rem;
+}
+
+i {
+    color: var(--yellowColor);
+}
+
+.siteBlock {
+    padding-bottom: 1.5rem;
+}
+
+.siteBlock:nth-child(1) {
+    padding-left: 1rem;
+}
+
+.siteBlock:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.siteBlock:nth-child(2) a {
+    padding: 5rem 5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.socialBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.socialBlock a {
+    padding: 5rem 7.5rem;
+}
+
+@media (max-width: 600px) {
+    .socialBlock a {
+    padding: 2.5rem 1.25rem;
+    }
+}
+/*# sourceMappingURL=style.css.map */
