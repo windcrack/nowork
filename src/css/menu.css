@@ -166,6 +166,12 @@ nav {
     border: none;
 }
 
+@media (max-width: 600px){
+    .toggle-button{
+        margin: auto;
+    }
+}
+
 .toggle-button i {
     font-size: 1.5rem;
 }
@@ -216,37 +222,37 @@ nav {
 
 @-webkit-keyframes marginLeftMob {
     0% {
-    margin-left: 0;
+        margin-left: 0;
     }
     100% {
-    margin-left: 0.25rem;
+        margin-left: 0.25rem;
     }
 }
 
 @keyframes marginLeftMob {
     0% {
-    margin-left: 0;
+        margin-left: 0;
     }
     100% {
-    margin-left: 0.25rem;
+        margin-left: 0.25rem;
     }
 }
 
 @-webkit-keyframes marginLeft {
     0% {
-    margin-left: 0;
+        margin-left: 0;
     }
     100% {
-    margin-left: 17.8rem;
+        margin-left: 17.8rem;
     }
 }
 
 @keyframes marginLeft {
     0% {
-    margin-left: 0;
+        margin-left: 0;
     }
     100% {
-    margin-left: 17.8rem;
+        margin-left: 17.8rem;
     }
 }
 
@@ -292,27 +298,27 @@ nav {
 
 @media (max-width: 600px) {
     .leftMenuBlock {
-    width: 100%;
-    -webkit-animation: slideInMob 600ms 1;
-            animation: slideInMob 600ms 1;
+        width: 100%;
+        -webkit-animation: slideInMob 600ms 1;
+                animation: slideInMob 600ms 1;
     }
 }
 
 @-webkit-keyframes slideInMob {
     0% {
-    width: 0;
+        width: 0;
     }
     100% {
-    width: 100%;
+        width: 100%;
     }
 }
 
 @keyframes slideInMob {
     0% {
-    width: 0;
+        width: 0;
     }
     100% {
-    width: 100%;
+        width: 100%;
     }
 }
 
@@ -426,18 +432,19 @@ main {
 
 @media (max-width: 600px) {
     .menuHeader {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     .menuHeader .secretBlock {
         display: inline;
         width: 2.18rem;
         height: 1.56rem;
+        margin: auto 0;
     }
 }
 
