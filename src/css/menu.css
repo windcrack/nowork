@@ -26,38 +26,38 @@ nav {
 
 @media (max-width: 600px) {
     nav {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 10rem 12.5rem 1fr 24.25rem;
-        grid-template-columns: 10rem 12.5rem 1fr 24.25rem;
-    -ms-grid-rows: 12.5rem 7.5rem;
-        grid-template-rows: 12.5rem 7.5rem;
-        grid-template-areas: "lMenu logo phone cart" "Tmenu Tmenu Tmenu Tmenu";
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 2.5rem 3.125rem 1fr 6.06rem;
+            grid-template-columns: 2.5rem 3.125rem 1fr 6.06rem;
+        -ms-grid-rows: 3.125rem 1.875rem;
+            grid-template-rows: 3.125rem 1.875rem;
+            grid-template-areas: "lMenu logo phone cart" "Tmenu Tmenu Tmenu Tmenu";
     }
     nav .phone {
-    text-align: center;
-    display: block;
-    margin: auto;
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-area: phone;
-    padding-left: 1.25rem;
+        text-align: center;
+        display: block;
+        margin: auto;
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+        grid-area: phone;
+        padding-left: 0.25rem;
     }
 }
 
-@media (max-width: 600px) and (max-width: 360px) {
+@media (max-width: 600px) and (max-width: 375px) {
     nav .phone a {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 600px) {
     nav .phone a {
-    text-decoration: none;
-    color: #fff;
+        text-decoration: none;
+        color: #fff;
     }
     nav .phone a:hover {
-    color: var(--yellowColor);
+        color: var(--yellowColor);
     }
 }
 
@@ -102,8 +102,8 @@ nav {
 
 @media (max-width: 600px) {
     .menu-cart {
-    grid-area: cart;
-    top: 3rem;
+        grid-area: cart;
+        top: 0.75rem;
     }
 }
 
@@ -136,7 +136,7 @@ nav {
     .cartInBlock {
     -webkit-box-shadow: none;
             box-shadow: none;
-    padding: 1rem 2.5rem 1rem 1.25rem;
+    padding: 0.25rem 1.56rem 0.25rem 0.31rem;
     }
 }
 
@@ -171,7 +171,7 @@ nav {
 
 @media (max-width: 600px) {
     .toggle-button {
-        margin-left: 1.25rem;
+        margin-left: 0.31rem;
     }
 }
 
@@ -208,7 +208,7 @@ nav {
     .btn-side-closeMob {
     -webkit-animation: marginLeftMob 1s 1;
             animation: marginLeftMob 1s 1;
-    margin-left: 1rem;
+    margin-left: 0.25rem;
     z-index: 100;
     }
 }
@@ -218,7 +218,7 @@ nav {
     margin-left: 0;
     }
     100% {
-    margin-left: 1rem;
+    margin-left: 0.25rem;
     }
 }
 
@@ -227,7 +227,7 @@ nav {
     margin-left: 0;
     }
     100% {
-    margin-left: 1rem;
+    margin-left: 0.25rem;
     }
 }
 
@@ -434,9 +434,9 @@ main {
             flex-direction: row;
     }
     .menuHeader .secretBlock {
-    display: inline;
-    width: 8.75rem;
-    height: 6.25rem;
+        display: inline;
+        width: 2.18rem;
+        height: 1.56rem;
     }
 }
 
