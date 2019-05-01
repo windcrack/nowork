@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Menu</title>
     <!-- Можно заилить будет в главный но тут траблы начинаются со старым :) -->
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Тут всё по старому -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
@@ -70,21 +70,21 @@
                 <a href="tel:88005553535">+7(800)555-35-35</a>
             </div>
             <div class="blockTwo">
-                <div class="text-menu">
-                    <div class="text-slider" id="top-menu">   
-                        <div><a href="#group-1" class="textInSlider">Маки</a></div>
-                        <div><a href="#group-2" class="textInSlider">Роллы</a></div>
-                        <div><a href="#gunk" class="textInSlider">Гунканы</a></div>
-                        <div><a href="#hot" class="textInSlider">Тёплые роллы</a></div>
-                        <div><a href="#pizza" class="textInSlider">Пицца</a></div>
-                        <div><a href="#soups" class="textInSlider">Супы</a></div>
-                        <div><a href="#salads" class="textInSlider">Салаты</a></div>
-                        <div><a href="#hotbl" class="textInSlider">Горячие блюда</a></div>
-                        <div><a href="#cold" class="textInSlider">Холодные напитки</a></div>
-                        <div><a href="#cold" class="textInSlider">Холодные напитки</a></div>
-                        <div><a href="#cold" class="textInSlider">Холодные напитки</a></div>
-                        <div><a href="#cold" class="textInSlider">Холодные напитки</a></div>
-                    </div>
+                <div class="text-menu dragscroll">
+                    <menu class="text-slider" id="top-menu">   
+                        <li><a href="#group-2" class="textInSlider">Роллы</a></li>
+                        <li><a href="#group-1" class="textInSlider">Маки</a></li>
+                        <li><a href="#gunk" class="textInSlider">Гунканы</a></li>
+                        <li><a href="#hot" class="textInSlider">Тёплые роллы</a></li>
+                        <li><a href="#pizza" class="textInSlider">Пицца</a></li>
+                        <li><a href="#soups" class="textInSlider">Супы</a></li>
+                        <li><a href="#salads" class="textInSlider">Салаты</a></li>
+                        <li><a href="#hotbl" class="textInSlider">Горячие блюда</a></li>
+                        <li><a href="#cold" class="textInSlider">Холодные напитки</a></li>
+                        <li><a href="#cold" class="textInSlider">Холодные напитки</a></li>
+                        <li><a href="#cold" class="textInSlider">Холодные напитки</a></li>
+                        <li><a href="#cold" class="textInSlider">Холодные напитки</a></li>
+                    </menu>
                 </div>
             </div>
             <div class="menu-cart">
@@ -102,6 +102,7 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolor?</p>
     <script src="js/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
+    <script src="js/dragscroll.js"></script>
     <!-- тут мы подлючать будет не bundle.js а menuSlider.js -->
     <script src="../dist/bundle.js"></script>
 </body>

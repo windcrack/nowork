@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -33,14 +32,16 @@ body {
 // }
 
 @function v($px, $basePix: 4, $minusPx: 0) {
-    @if $minusPx == 0 {
-      @return ($px / $basePix) + rem;
+    @if $minusPx==0 {
+        @return ($px / $basePix)+rem;
     }
-    @return 'calc(' + ($px / $basePix) + 'rem - ' + $minusPx + 'px)';
+
+    @return 'calc('+($px / $basePix)+'rem - '+$minusPx+'px)';
 }
 
 h1 {
-    font-size: v(48); /* вводишь реальные цифры размеров, ничего считать в уме не нужно */
+    font-size: v(48);
+    /* вводишь реальные цифры размеров, ничего считать в уме не нужно */
     line-height: v(64);
 }
 
@@ -56,7 +57,7 @@ a {
 // }
 
 
-main{
+main {
     // background: url('../img/ph.jpg') center no-repeat;
     // background-size: 95%;
     // height: 95vh;
@@ -64,14 +65,14 @@ main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 40%);
-    grid-template-areas: 
-    "root input input"
-    "chat . .";
+    grid-template-areas:
+        "root input input"
+        "chat . .";
 }
 
 
 
-.noRoot{
+.noRoot {
     margin: auto;
     max-width: v(950);
     height: v(550);
@@ -79,17 +80,17 @@ main{
     grid-area: root;
 }
 
-.inputs{
+.inputs {
     grid-area: input;
 }
 
 .name,
-.pass{
+.pass {
     margin: v(18) 0;
 }
 
-.root{
-    background-color:green;
+.root {
+    background-color: green;
     max-width: v(800);
     height: v(150);
     margin: auto;
@@ -99,11 +100,11 @@ main{
     // margin-top: auto;
 }
 
-.miniChat{
+.miniChat {
     grid-area: chat;
 }
 
-.windowChat{
+.windowChat {
     background-color: aqua;
     color: burlywood;
     height: v(400);
@@ -114,35 +115,39 @@ main{
     flex-wrap: wrap;
     overflow-y: scroll;
 }
-.mess{
+
+.mess {
     color: #012456;
     width: 100%;
     // margin-top: auto;
     border: solid 2px red;
 }
+
 #ancor1,
 #ancor2,
 #ancor3,
-#ancor4{
+#ancor4 {
     height: 30vh;
     background-color: aqua;
     margin: v(14) 0;
 }
 
-@media (max-width: v(1300)){
-    main{
+@media (max-width: v(1300)) {
+    main {
         background-size: cover;
     }
 }
-@media (max-width: v(800)){
-    
-    .noRoot{
+
+@media (max-width: v(800)) {
+
+    .noRoot {
         height: v(600);
     }
-    
+
 }
-@media (max-width: v(600)){
-    .noRoot{
+
+@media (max-width: v(600)) {
+    .noRoot {
         max-height: v(400);
         min-width: v(450);
     }
@@ -150,7 +155,7 @@ main{
 
 // Menu
 
-:root{
+:root {
     --yellowColor: #fdad1a;
 }
 
@@ -160,33 +165,39 @@ header {
     border-bottom: 1px solid #F47810;
     z-index: 2;
     position: fixed;
+    min-width: 100%;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         display: grid;
         grid-template-columns: v(40) v(50) 1fr v(97);
         grid-template-rows: v(50) v(30);
-        grid-template-areas: 
-        "lMenu logo phone cart"
-        "Tmenu Tmenu Tmenu Tmenu";
-        .phone{
+        grid-template-areas:
+            "lMenu logo phone cart"
+            "Tmenu Tmenu Tmenu Tmenu";
+
+        .phone {
             text-align: center;
             display: block;
             margin: auto;
             grid-area: phone;
             padding-left: v(5);
-            @media (max-width: 360px){
-                a{
+
+            @media (max-width: 360px) {
+                a {
                     font-size: v(14);
                 }
             }
-            a{
+
+            a {
                 text-decoration: none;
                 color: #fff;
-                &:hover{
+
+                &:hover {
                     color: var(--yellowColor);
                 }
             }
@@ -194,7 +205,66 @@ nav{
     }
 }
 
-.panel{
+.text-slider {
+    display: flex;
+    list-style-type: none;
+
+    a {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        text-align: justify;
+        transform: translateY(5px);
+        &:hover{
+            color: var(--yellowColor);
+        }
+        @media (max-width: 800px){
+            transform: translateY(-10px);
+        }
+    }
+}
+
+
+.text-menu {
+    width: 1040px;
+    padding: 0 20px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+    display: flex;
+    align-items: flex-end;
+    cursor: grab;
+    mask-image: linear-gradient(90deg,
+        transparent 0, rgba(0, 0, 0, .25) 9px,
+        #000 18px,
+        #000 calc(100% - 18px),
+        rgba(0, 0, 0, .25) calc(100% - 9px),
+        transparent);
+    @media (max-width: 800px){
+        padding: 0 5px;
+    }
+}
+
+.blockTwo {
+    margin: v(4) 0;
+    width: auto;
+    overflow: hidden;
+
+    @media (max-width: 600px) {
+        grid-area: Tmenu
+    }
+}
+
+.textInSlider {
+    margin-right: 20px;
+    display: flex;
+    width: auto;
+    white-space: nowrap;
+}
+
+.panel {
     float: left;
     overflow-y: hidden;
 }
@@ -202,85 +272,84 @@ nav{
 .logo {
     padding: v(4) 0;
     margin-left: v(25);
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         padding-right: v(4);
     }
 }
 
-.phone{
+.phone {
     display: none;
 }
 
-@media (max-width: 600px){
-    .logo{
+@media (max-width: 600px) {
+    .logo {
         margin-left: v(3);
         grid-area: logo;
     }
 }
+
 .menu-cart {
     color: #F47810;
     position: fixed;
     right: 0;
     background-color: #000;
-    i{
+
+    i {
         font-size: v(20);
         padding-right: v(4);
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         grid-area: cart;
         top: v(12)
     }
-    .cartInBlock{
-        img{
+
+    .cartInBlock {
+        img {
             padding-right: v(15);
-            @media (max-width: 600px){
+
+            @media (max-width: 600px) {
                 padding-right: v(2);
             }
         }
     }
 }
 
-.cartInBlock{
+.cartInBlock {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: v(4) v(30) v(4) v(20);
     box-shadow: -10px 1px 10px 8px rgba(0, 0, 0, 1);
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         box-shadow: none;
         padding: v(4) v(10) v(4) v(5);
     }
 }
 
-.text-slider{
-    display: flex;
-}
-
-.text-slider a {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    text-decoration: none;
-}
 
 .toggle-button {
     margin: v(16) 0 v(16) v(25);
     width: 35px;
     height: 25px;
     border: none;
-    i{
+
+    i {
         font-size: v(24);
     }
-    @media (max-width: 600px){
-        margin-left: v(5); 
+
+    @media (max-width: 600px) {
+        margin-left: v(5);
     }
 }
 
-.panel{
+.panel {
     float: none;
     display: contents;
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         grid-area: lMenu;
     }
 }
@@ -299,46 +368,47 @@ nav{
     display: none;
     margin-left: v(286);
     animation: marginLeft 1s 1;
-    @media (max-width:600px){
+
+    @media (max-width: 600px) {
         animation: marginLeftMob 1s 1;
         margin-left: v(4);
         z-index: 100;
     }
 }
 
-@keyframes marginLeftMob{
+.closeModal {
+    animation: marginRigth 1s;
+}
+
+@keyframes marginLeftMob {
     0% {
         margin-left: 0;
     }
-    
+
     100% {
-        margin-left: v(4);
+        margin-left: 4px;
     }
 }
 
-@keyframes marginLeft{
+@keyframes marginLeft {
     0% {
         margin-left: 0;
     }
-    
+
     100% {
-        margin-left: v(286);
+        margin-left: 286px;
     }
 }
 
-.textInSlider{
-    padding: v(8);
+
+
+.textInSlider {
+    padding: 8px;
 }
 
-.blockTwo{
-    margin: v(4) 0;
-    width: auto;
-    @media (max-width: 600px){
-        grid-area: Tmenu
-    }
-}
 
-.testMenu{
+
+.testMenu {
     height: 40%;
     color: #F47810;
 }
@@ -346,7 +416,7 @@ nav{
 
 // Left menu
 
-.leftMenuBlock{
+.leftMenuBlock {
     position: fixed;
     left: 0;
     top: 0;
@@ -359,12 +429,13 @@ nav{
     overflow-y: hidden;
     display: none;
     animation: slideIn 600ms 1;
-    animation-fill-mode: forwards;
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         width: 100%;
         animation: slideInMob 600ms 1;
     }
 }
+
 @keyframes slideInMob {
     0% {
         width: 0;
@@ -374,6 +445,16 @@ nav{
         width: 100%;
     }
 }
+
+@keyframes marginRight {
+    0%{
+       width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
 .slideIn {
     animation-duration: 300ms;
     animation-name: slideIn;
@@ -394,17 +475,17 @@ nav{
     }
 }
 
-@keyframes slideOut{
-    from{
+@keyframes slideOut {
+    from {
         opacity: 1;
     }
-    
-    to{
+
+    to {
         opacity: 0;
     }
 }
 
-.leftMenuMain{
+.leftMenuMain {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -414,18 +495,21 @@ nav{
     animation: menuMain 1s 1;
 }
 
-@keyframes menuMain{
-    0%{
+@keyframes menuMain {
+    0% {
         height: 0;
     }
-    100%{
+
+    100% {
         height: 100%;
     }
 }
-main{
+
+main {
     padding-top: 30%;
 }
-.menuHeader{
+
+.menuHeader {
     color: #fff;
     display: none;
     flex-direction: column;
@@ -433,59 +517,69 @@ main{
     opacity: 1;
     background-color: #000;
     animation: showBlock 1s 1;
-    .secretBlock{
+
+    .secretBlock {
         display: none;
     }
 
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
         justify-content: space-between;
         flex-direction: row;
-        .secretBlock{
+
+        .secretBlock {
             display: inline;
             width: v(35);
             height: v(25);
         }
     }
 }
-@keyframes showBlock{
+
+@keyframes showBlock {
     0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-.headText{
+
+.headText {
     margin-left: v(30);
     // font-size: v(12);
     margin: v(5.4) v(20);
-    a{
+
+    a {
         color: #fff;
         text-decoration: none;
-        &:hover{
+
+        &:hover {
             color: var(--yellowColor);
         }
     }
 }
-.headTextLogin{
+
+.headTextLogin {
     margin: v(14) auto;
 }
-.textBlock{
+
+.textBlock {
     display: flex;
     flex-direction: column;
 }
 
-.menu-section{
+.menu-section {
     display: none;
     animation: showBlock 1s 1;
     flex-direction: column;
     justify-content: space-between;
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         margin: 0 auto;
     }
 }
 
-.callUs{
+.callUs {
     background: url('../img/phone.svg') right 5% center no-repeat, var(--yellowColor);
     background-size: 11% 50%;
     border-radius: v(50);
@@ -497,33 +591,41 @@ main{
     padding-left: v(16);
     font-size: v(16);
 }
-i{
+
+i {
     color: var(--yellowColor);
 }
-.siteBlock{
+
+.siteBlock {
     padding-bottom: v(6);
-    &:nth-child(1){
+
+    &:nth-child(1) {
         padding-left: v(4);
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
         display: flex;
         flex-direction: column;
-        a{
+
+        a {
             padding: v(20) v(20);
             color: #fff;
             text-decoration: none;
         }
     }
 }
-.socialBlock{
+
+.socialBlock {
     display: flex;
     align-items: center;
     justify-content: center;
-    a{
+
+    a {
         padding: v(20) v(30);
     }
-    @media (max-width: 600px){
-        a{
+
+    @media (max-width: 600px) {
+        a {
             padding: v(10) v(5);
         }
     }
