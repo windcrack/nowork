@@ -130,6 +130,13 @@ main {
   }
 }
 
+.comandWindow {
+  width: 50rem;
+  height: 50rem;
+  background-color: #F47810;
+  color: red;
+}
+
 :root {
   --yellowColor: #fdad1a;
 }
@@ -596,8 +603,119 @@ nav {
   }
 }
 
-main {
-  padding-top: 30%;
+.redButton {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5% 50%;
+  cursor: pointer;
+}
+
+.modalTimer {
+  width: 744px;
+  height: 528px;
+  background-color: #0D0E13;
+  border: 4px solid #FDAD1E;
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modalTimerImg {
+  width: 50%;
+  background: url("../src/img/pizzaImg.png") center no-repeat;
+  background-size: cover;
+}
+
+.modalTimerImg img {
+  padding-top: 14px;
+  padding-left: 16px;
+}
+
+.modalTimerText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #E3E9CB;
+  width: 50%;
+}
+
+.modalTimerText .close {
+  color: #FDAD1E;
+  font-weight: bold;
+  opacity: 0.8;
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-top: 14px;
+  padding-right: 16px;
+}
+
+.modalTimerText .close:hover {
+  opacity: 1;
+}
+
+.timerTextRememb,
+.timerTextSorry,
+.timerTextTitle {
+  width: 312px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.timerTextTitle {
+  font-size: 32px;
+  line-height: 37px;
+  margin: 41px auto 24px;
+}
+
+.timerTextRememb {
+  margin: 0 auto 24px;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.timerTextSorry {
+  font-size: 20px;
+  line-height: 150%;
+  margin: 0 auto 40px;
+}
+
+.buttonCloseTimer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 168px;
+  height: 32px;
+  background-color: #FDAD1E;
+  color: #000;
+  border-radius: 4px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .menuHeader {

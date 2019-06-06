@@ -153,6 +153,13 @@ main {
     }
 }
 
+.comandWindow {
+    width: v(200);
+    height: v(200);
+    background-color: #F47810;
+    color: red
+}
+
 // Menu
 
 :root {
@@ -216,10 +223,12 @@ nav {
         text-decoration: none;
         text-align: justify;
         transform: translateY(5px);
-        &:hover{
+
+        &:hover {
             color: var(--yellowColor);
         }
-        @media (max-width: 800px){
+
+        @media (max-width: 800px) {
             transform: translateY(-10px);
         }
     }
@@ -237,12 +246,13 @@ nav {
     align-items: flex-end;
     cursor: grab;
     mask-image: linear-gradient(90deg,
-        transparent 0, rgba(0, 0, 0, .25) 9px,
-        #000 18px,
-        #000 calc(100% - 18px),
-        rgba(0, 0, 0, .25) calc(100% - 9px),
-        transparent);
-    @media (max-width: 800px){
+            transparent 0, rgba(0, 0, 0, .25) 9px,
+            #000 18px,
+            #000 calc(100% - 18px),
+            rgba(0, 0, 0, .25) calc(100% - 9px),
+            transparent);
+
+    @media (max-width: 800px) {
         padding: 0 5px;
     }
 }
@@ -447,10 +457,11 @@ nav {
 }
 
 @keyframes marginRight {
-    0%{
-       width: 100%;
+    0% {
+        width: 100%;
     }
-    100%{
+
+    100% {
         width: 0;
     }
 }
@@ -506,7 +517,105 @@ nav {
 }
 
 main {
-    padding-top: 30%;
+    // padding-top: 30%;
+}
+
+.redButton{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 50%;
+    cursor: pointer;
+}
+
+// Modal
+
+.modalTimer {
+    width: 744px;
+    height: 528px;
+    background-color: #0D0E13;
+    border: 4px solid #FDAD1E;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+
+.modalTimerImg {
+    width: 50%;
+    background: url('../src/img/pizzaImg.png') center no-repeat;
+    background-size: cover;
+    img{
+        padding-top: 14px;
+        padding-left: 16px; 
+    }
+}
+
+.modalTimerText {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    color: #E3E9CB;
+    width: 50%;
+
+    .close {
+        color: #FDAD1E;
+        font-weight: bold;
+        opacity: 0.8;
+        cursor: pointer;
+        align-self: flex-end;
+        padding-top: 14px;
+        padding-right: 16px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.timerTextRememb,
+.timerTextSorry,
+.timerTextTitle {
+    width: 312px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.timerTextTitle {
+    font-size: 32px;
+    line-height: 37px;
+    margin: 41px auto 24px;
+}
+
+.timerTextRememb {
+    margin: 0 auto 24px;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.timerTextSorry {
+    font-size: 20px;
+    line-height: 150%;
+    margin: 0 auto 40px;
+}
+
+.buttonCloseTimer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 32px;
+    background-color: #FDAD1E;
+    color: #000;
+    border-radius: 4px;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 .menuHeader {

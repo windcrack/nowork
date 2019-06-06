@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Test</title>
-	<link rel="stylesheet" href="sass/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-	
+	<div class="redButton">ЖМИ!</div>
 	<main>
 		<a href="ancortest.html">GO!</a>
 		<a href="menu.html">Menu</a>
@@ -28,8 +28,29 @@
 			<input type="text" class="textMess">
 			<button class="sendMess">Отрпавить</button>
 		</form>
-		
+		<form action="">
+			<label for="comand">Ваша команда:</label>
+			<input type="text" placeholder="введите команду">
+		</form>
+		<div class="comandWindow"></div>
 	</main>
+	<div class="modalTimer">
+		<div class="modalTimerImg">
+			<img src="img/logoFromModal.png" alt="this logo">
+		</div>
+		<div class="modalTimerText">
+			<div class="close">X</div>
+			<h2 class="timerTextTitle">Уважаемый покупатель!</h2>
+			<span class="timerTextRememb">Напоминаем, что заказы 
+				с 22:15 до 09:00
+				Не обрабатываются!
+			</span>
+			<span class="timerTextSorry">Приносим извинения за доставленные неудобства! 
+				Рады видеть вас в рабочее время!
+			</span>
+			<div class="buttonCloseTimer">Понятненько</div>
+		</div>
+	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<script src="../dist/bundle.js"></script>
